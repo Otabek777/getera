@@ -1,0 +1,76 @@
+//.css-section {
+//  background-size: cover;
+//  background-repeat: no-repeat;
+//  width: 100vw;
+//  height: 100vh;
+//  background-position: 50%;
+//}
+
+@media(min-width: 600px) {
+  body {
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .css-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 1s, background-position 1s;
+    opacity: 0;
+  }
+
+  .css-section .css-movable {
+    position: relative;
+    transition: top 1.5s, opacity 1s, transform 1.5s;
+  }
+
+  .css-section--prev {
+    background-position-y: -100px;
+  }
+
+  .css-section--prev .css-movable {
+    top: -200px;
+  }
+
+  .css-section--current {
+    top: 0;
+    background-position-y: 0;
+  }
+
+  .css-section--current .css-movable {
+    top: 0;
+  }
+
+  .css-section--next {
+    top: 100vh;
+    background-position-y: 100px;
+  }
+
+  .css-section--next .css-movable {
+    top: 200px;
+  }
+
+  .css-block {
+
+  }
+
+  .css-block--hidden {
+    position: absolute !important;
+    right: 10000px;
+  }
+
+  .css-block--prev {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  .css-block--current {
+    opacity: 1;
+  }
+
+  .css-block--next {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+}
